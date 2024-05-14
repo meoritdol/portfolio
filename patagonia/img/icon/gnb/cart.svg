@@ -1,0 +1,3 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="icon--navigation-primary--cart" width="24"  height="24" ><defs><symbol viewBox="0 0 24 24" aria-labelledby="kicon--navigation-primary--cart-desc kicon--navigation-primary--cart-title" id="icon--navigation-primary--cart" xmlns="http://www.w3.org/2000/svg"><title id="kicon--navigation-primary--cart-title">navigation primary cart</title><desc id="kicon--navigation-primary--cart-desc">navigation primary cart</desc><path d="M7 8V6a5 5 0 1110 0v2h3a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1h3zm0 2H5v10h14V10H7zm2-2h6V6a3 3 0 00-6 0v2z"></path></symbol></defs>
+<use href="#icon--navigation-primary--cart"></use>
+</svg>
