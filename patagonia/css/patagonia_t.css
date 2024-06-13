@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+/* 메인 태블릿 */
+
+body {
+  min-width: 640px;
+}
+
+header {
+  width: 100%;
+}
+
+header .top {
+  padding: 0 40px;
+}
+
+header .nav {
+  width: 100%;
+  padding: 0px 40px;
+}
+
+header .menu {
+  gap: 20px;
+}
+
+header .icon {
+  gap: 20px;
+}
+
+#fullscreenMenu {
+  width: 100%;
+}
+
+header .menu_main {
+  padding: 60px;
+}
+
+
+/* 메인 */
+
+.section1 h1 {
+  font-size: 50px;
+}
+
+.section1 div {
+  gap: 20px;
+}
+
+.section2 h2 {
+  font-size: 40px;
+}
+
+.section2 .swiper-button-prev {
+  display: flex;
+  background-color: #FFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.section2 .swiper-button-prev .bt_left {
+  background: url(/patagonia/img/icon/body/icon-chevron-slider.png) no-repeat;
+  background-size: 50% auto;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  transform: scaleX(-1);
+}
+
+.section2 .swiper-button-next {
+  display: flex;
+  background-color: #FFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.section2 .swiper-button-next .bt_right {
+  background: url(/patagonia/img/icon/body/icon-chevron-slider.png) no-repeat;
+  background-size: 50% auto;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+}
+
+.section2 .swiper-button-prev::after,
+.section2 .swiper-button-next::after {
+  display: none;
+}
+
+.section3 {
+  padding: 0;
+}
+
+.section3 h1 {
+  font-size: 50px;
+}
+
+.section4 .inner {
+  padding: 0;
+}
+
+.section4 h1 {
+  font-size: 50px;
+
+}
+
+.section4 p {
+  font-weight: 500;
+}
+
+.section5 .swiper-slide {
+  min-width: 320px;
+}
+
+.section6 h1 {
+  font-size: 50px;
+}
+
+
+.section7 .swiper-slide {
+  min-width: 320px;
+}
+
+.section7 h1 {
+  font-size: 50px;
+}
+
+.section8 {
+  padding: 0;
+}
+
+.section9 {
+  height: auto;
+}
+
+.section9 .sec9Top {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+  text-align: center;
+  padding: 100px 200px 40px 200px;
+}
+
+.section9 .sec9Bottom {
+  flex-direction: column;
+  gap: 60px;
+  padding: 0 0 0 20px;
+}
+
+.section9 .sec9Bottom li {
+  width: 100%;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.section9 .bottom2 .hover {
+  justify-content: flex-start;
+}
+
+.section9 .bottom2 p {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* 푸터 */
+
+footer {
+  padding: 80px 0 0 20px;
+}
+
+footer span {
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+}

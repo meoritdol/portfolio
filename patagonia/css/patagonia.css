@@ -36,6 +36,11 @@ ul {
 
 /* 헤더 */
 
+header {
+  width: 100%;
+  height: 100%;
+}
+
 header .top {
   display: flex;
   width: 100%;
@@ -47,8 +52,13 @@ header .top {
   background: #000;
   color: #fff;
   font-size: 12px;
+  position: relative;
 }
 
+header .top a:first-child {
+  position: absolute;
+  left: 46%;
+}
 
 
 header .top a:nth-child(2) {
@@ -67,9 +77,9 @@ header .nav {
 }
 
 header .logo {
-  background: url(/portfolio/patagonia/img/icon/gnb/logo_patagonia.svg);
-  width: 172px;
-  height: 32px;
+  background: url(/portfolio/patagonia/img/icon/gnb/logo_patagonia.svg) 50% 50% / cover;
+  width: 120px;
+  height: 20px;
 }
 
 header .menu {
@@ -81,9 +91,27 @@ header .menu {
   line-height: normal;
 }
 
-header .menu span {
+header .menu a {
   cursor: pointer;
+  position: relative;
 }
+
+header .menu a::after {
+  content: '';
+  height: 6px;
+  width: 100%;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: -24px;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+header .menu a:hover::after {
+  opacity: 1;
+}
+
 
 header .icon {
   display: flex;
@@ -92,13 +120,12 @@ header .icon {
   gap: 35px;
 }
 
-/* 아이콘 크키  */
-
 header .search {
   background: url(/portfolio/patagonia/img/icon/gnb/search.svg);
   height: 20px;
   width: 20px;
   background-size: cover;
+  background-position: center center;
 }
 
 header .profile {
@@ -106,6 +133,7 @@ header .profile {
   height: 20px;
   width: 20px;
   background-size: cover;
+  background-position: center center;
 }
 
 header .wishlist {
@@ -114,6 +142,7 @@ header .wishlist {
   width: 20px;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
 
 }
 
@@ -122,20 +151,168 @@ header .cart {
   height: 20px;
   width: 20px;
   background-size: cover;
+  background-position: center center;
 }
 
 header .hamburger {
   background: url(/portfolio/patagonia/img/icon/gnb/hamburger.svg);
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
   background-size: cover;
-  object-position: 50% 50%;
+  background-position: center center;
 }
+
+#fullscreenMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255);
+  z-index: 9999;
+  overflow: auto;
+}
+
+header .fullscreen_menu.active {
+  display: block;
+}
+
+header .menu_header {
+  display: flex;
+  padding: 40px 60px;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.menu_header a {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.menu_header i {
+  cursor: pointer;
+}
+
+header .menu_main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 40px 360px;
+  justify-content: center;
+
+}
+
+.menu_main .text1,
+.menu_main .text2 {
+  display: flex;
+  width: calc(100% - 33%);
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.menu_main span {
+  color: #999;
+  font-size: 12px;
+}
+
+.menu_main ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.menu_main li {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.menu_main .content {
+  display: flex;
+  width: calc(100% - 33%);
+  height: 100%;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  color: #FFF;
+}
+
+.menu_main .content p {
+  font-size: 12px;
+}
+
+.menu_main .content1 {
+  display: flex;
+  width: 260px;
+  height: 160px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url(/portfolio/patagonia/img/header/img_header_wornwear.jpg) lightgray 50% / cover no-repeat;
+}
+
+.menu_main .content1:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(/portfolio/patagonia/img/header/img_header_wornwear.jpg) lightgray 50% / cover no-repeat;
+}
+
+.menu_main .content2 {
+  display: flex;
+  width: 260px;
+  height: 160px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url(/portfolio/patagonia/img/header/img_header_cleanstline.jpg) lightgray 50% / cover no-repeat;
+}
+
+.menu_main .content2:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(/portfolio/patagonia/img/header/img_header_cleanstline.jpg) lightgray 50% / cover no-repeat;
+}
+
+.menu_main .content3 {
+  display: flex;
+  width: 260px;
+  height: 160px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url(/portfolio/patagonia/img/header/img_header_social.jpg) lightgray 50% / cover no-repeat;
+}
+
+.menu_main .content3:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(/portfolio/patagonia/img/header/img_header_social.jpg) lightgray 50% / cover no-repeat;
+}
+
+
 
 
 
 /* 메인 */
 
+
+.tab_content {
+  display: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.tab_content.active {
+  display: block;
+}
 
 .section1 {
   display: flex;
@@ -157,20 +334,21 @@ video {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .section1 h1 {
   font-size: 60px;
   position: absolute;
-  top: 30%;
-  left: 27%;
+  top: 24%;
+  z-index: 2;
 }
 
 .section1 p {
   font-size: 20px;
   position: absolute;
-  top: 53%;
-  left: 30%;
+  top: 44%;
+  z-index: 2;
 }
 
 .section1 div {
@@ -180,8 +358,16 @@ video {
   font-weight: 700;
   color: #000;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 56%;
+  z-index: 2;
+}
+.section1 a {
+  display: flex;
+  z-index: 2;
+}
+
+.section1 a:hover {
+  transform: scale3d(1.044, 1.044, 1);
 }
 
 .section1 a:first-child {
@@ -193,17 +379,8 @@ video {
   align-items: center;
   border-radius: 30px;
   background: #fff;
-  position: absolute;
-  top: 260px;
-  left: 730px;
-}
 
-.section1 a i {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  top: 30px;
-  left: 46px;
+
 }
 
 .section1 a:nth-child(2) {
@@ -215,23 +392,13 @@ video {
   align-items: center;
   border-radius: 30px;
   background: #FFF;
-  position: absolute;
-  top: 260px;
-  left: 930px;
-}
 
-.section1 a {
-  display: flex;
-}
-
-.section1 a:hover {
-  transform: scale3d(1.044, 1.044, 1);
 }
 
 .section2 {
   display: flex;
   width: 100%;
-  height: 400px;
+  height: 500px;
   padding: 20px 10px;
   justify-content: center;
   align-items: center;
@@ -241,8 +408,8 @@ video {
 
 .section2 .content {
   display: flex;
-  width: 1400px;
-  max-height: 360px;
+  width: 90%;
+  height: 480px;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -258,6 +425,20 @@ video {
   line-height: normal;
 }
 
+.section2 .content a {
+  display: flex;
+  width: 180px;
+  padding: 18px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background: #FFF;
+  font-size: 20px;
+  color: #000;
+  font-weight: 700;
+  opacity: 0;
+}
+
 .section2 .sec2Swiper {
   width: 100%;
   height: 360px;
@@ -269,47 +450,83 @@ video {
 
 .section2 .swiper-slide {
   border-radius: 10px;
+  position: relative;
+  gap: 20px;
+}
+
+.section2 .swiper-slide:hover h2 {
+
+  position: absolute;
+  top: 33%;
+  transition: .5s ease;
+}
+
+.section2 .swiper-slide:hover a {
+  opacity: 1;
+  transition: .5s ease;
 }
 
 .section2 .sec2Card1 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/mens-routing_240208.jpg) lightgray 50% / cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/portfolio/patagonia/img/main/mens-routing_240208.jpg) lightgray 50% / cover no-repeat;
   display: flex;
-  padding: 0px 93px 0px 92px;
+  padding: 60px 93px 0px 92px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-self: stretch;
+  position: relative;
 }
+
+.section2 .sec2Card1:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/mens-routing_240208.jpg) lightgray 50% / cover no-repeat;
+}
+
 
 .section2 .sec2Card2 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/womens-routing_240208.jpg) lightgray 50% / cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/portfolio/patagonia/img/main/womens-routing_240208.jpg) lightgray 50% / cover no-repeat;
   display: flex;
-  padding: 0px 61px;
+  padding: 60px 93px 0px 92px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-self: stretch;
+  position: relative;
 }
+
+.section2 .sec2Card2:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/womens-routing_240208.jpg) lightgray 50% / cover no-repeat;
+}
+
 
 .section2 .sec2Card3 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/kids-routing_240208.jpg) lightgray 50% / cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/portfolio/patagonia/img/main/kids-routing_240208.jpg) lightgray 50% / cover no-repeat;
   display: flex;
-  padding: 0px 30px 0px 29px;
+  padding: 60px 0px 0px 0px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-self: stretch;
 }
 
+.section2 .sec2Card3:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/kids-routing_240208.jpg) lightgray 50% / cover no-repeat;
+}
+
+
 .section2 .sec2Card4 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/packs-gear-routing_240226.jpg) lightgray 50% / cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/portfolio/patagonia/img/main/packs-gear-routing_240226.jpg) lightgray 50% / cover no-repeat;
   display: flex;
-  padding: 0px 21px;
+  padding: 60px 0px 0px 0px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-self: stretch;
 }
+
+.section2 .sec2Card4:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/packs-gear-routing_240226.jpg) lightgray 50% / cover no-repeat;
+}
+
 
 .section3 {
   display: flex;
@@ -426,7 +643,6 @@ video {
   transform: scale3d(1.044, 1.044, 1);
 }
 
-/* section5 카드1, 카드 갭  */
 .section5 {
   display: flex;
   width: 100%;
@@ -442,6 +658,7 @@ video {
   flex-direction: row;
   width: 360px;
   padding: 0px 60px;
+  justify-content: center;
   align-items: center;
   gap: 20px;
 }
@@ -470,7 +687,55 @@ video {
   align-items: flex-start;
   gap: 200px;
   color: #FFF;
+  position: relative;
 }
+
+
+.section5 .swiper-slide:hover span {
+  border-radius: 30px;
+  border: 2px solid #FFF;
+  background: #FFF;
+  color: #000;
+}
+
+.section5 .swiper-button-prev {
+  display: flex;
+  background-color: #FFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.section5 .swiper-button-prev .bt_left {
+  background: url(/portfolio/patagonia/img/icon/body/icon-chevron-slider.png) no-repeat;
+  background-size: 50% auto;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  transform: scaleX(-1);
+}
+
+.section5 .swiper-button-next {
+  display: flex;
+  background-color: #FFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.section5 .swiper-button-next .bt_right {
+  background: url(/portfolio/patagonia/img/icon/body/icon-chevron-slider.png) no-repeat;
+  background-size: 50% auto;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+}
+
+.section5 .swiper-button-prev::after,
+.section5 .swiper-button-next::after {
+  display: none;
+}
+
 
 .section5 span {
   border-radius: 30px;
@@ -480,7 +745,11 @@ video {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
 }
+
+
 
 .section5 .swiper-slide:first-child {
   gap: 160px;
@@ -490,6 +759,7 @@ video {
   background: #EAEAEA;
   color: #000;
   position: relative;
+  overflow: hidden;
 }
 
 .section5 .sec5Card1 .card1Bg {
@@ -514,35 +784,228 @@ video {
   font-weight: 700;
 }
 
+.section5 .cardWrap {
+  position: absolute;
+  height: 500px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px;
+  background: #EAEAEA;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.section5 .swiper-slide:hover .cardWrap {
+  transform: translateY(0);
+
+}
+
+.section5 .cardWrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.section5 .swiper-slide:hover .cardWrap::before {
+  opacity: 1;
+}
+
+.section5 .cardWrap .box5Card1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0px;
+  align-items: flex-start;
+}
+
+.section5 .cardWrap .box5Card1 div:first-child {
+  display: flex;
+  padding: 0px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.section5 .cardWrap .box5Card1 div:last-child {
+  display: flex;
+  padding: 0px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 220px;
+  line-height: 2;
+
+}
+
+.section5 .cardWrap:hover span {
+  color: #FFFFFF;
+  background: #000;
+}
 
 .section5 .sec5Card2 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/C.SALADO_BLOG_THUMB.png) lightgray 50% / cover no-repeat;
+}
+
+.section5 .sec5Card2:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.527) 0%, rgba(0, 0, 0, 0.5) 100%), url(/portfolio/patagonia/img/main/C.SALADO_BLOG_THUMB.png) lightgray 50% / cover no-repeat;
+}
+
+.section5 .sec5Card2:hover h3 {
+  position: absolute;
+  top: 10%;
+  transition: 0.3s ease;
+}
+
+.section5 .sec5Card2 .cardWrap {
+  background: none;
+}
+
+.section5 .cardWrap .box5Card2 {
+  position: absolute;
+  top: 20%;
+  padding: 0 24px 0 4px;
+  line-height: 2;
 }
 
 .section5 .sec5Card3 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/CUSTODIANS_BLOG_THUMB.png) lightgray 50% / cover no-repeat;
 }
 
-.section5 .sec5Card4 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/JP_BLOG_THUMB.png) lightgray 50% / cover no-repeat;
+.section5 .sec5Card3:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.527) 0%, rgba(0, 0, 0, 0.5) 100%), url(/portfolio/patagonia/img/main/CUSTODIANS_BLOG_THUMB.png) lightgray 50% / cover no-repeat;
+}
+
+.section5 .sec5Card3:hover h3 {
+  position: absolute;
+  top: 10%;
+  transition: 0.3s ease;
+}
+
+.section5 .sec5Card3 .cardWrap {
+  background: none;
+}
+
+.section5 .cardWrap .box5Card3 {
+  position: absolute;
+  top: 20%;
+  padding: 0 24px 0 4px;
+  line-height: 2;
 
 }
+
+.section5 .sec5Card4 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/JP_BLOG_THUMB.png) lightgray 50% / cover no-repeat;
+}
+
+.section5 .sec5Card4:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.527) 0%, rgba(0, 0, 0, 0.5) 100%), url(/portfolio/patagonia/img/main/JP_BLOG_THUMB.png) lightgray 50% / cover no-repeat;
+}
+
+.section5 .sec5Card4:hover h3 {
+  position: absolute;
+  top: 10%;
+  transition: 0.3s ease;
+}
+
+.section5 .sec5Card4 .cardWrap {
+  background: none;
+}
+
+.section5 .cardWrap .box5Card4 {
+  position: absolute;
+  top: 20%;
+  padding: 0 24px 0 4px;
+  line-height: 2;
+
+}
+
 
 .section5 .sec5Card5 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/HPD_BLOG_THUMB.png) lightgray 50% / cover no-repeat;
 }
 
+.section5 .sec5Card5:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.527) 0%, rgba(0, 0, 0, 0.5) 100%), url(/portfolio/patagonia/img/main/HPD_BLOG_THUMB.png) lightgray 50% / cover no-repeat;
+}
+
+.section5 .sec5Card5:hover h3 {
+  position: absolute;
+  top: 10%;
+  transition: 0.3s ease;
+}
+
+.section5 .sec5Card5 .cardWrap {
+  background: none;
+}
+
+.section5 .cardWrap .box5Card5 {
+  position: absolute;
+  top: 20%;
+  padding: 0 4px;
+}
+
+
 .section5 .sec5Card6 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/I.png) lightgray 50% / cover no-repeat;
+}
+
+.section5 .sec5Card6:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.527) 0%, rgba(0, 0, 0, 0.5) 100%), url(/portfolio/patagonia/img/main/I.png) lightgray 50% / cover no-repeat;
+}
+
+
+.section5 .sec5Card6:hover h3 {
+  position: absolute;
+  top: 10%;
+  transition: 0.3s ease;
+}
+
+.section5 .sec5Card6 .cardWrap {
+  background: none;
+}
+
+.section5 .cardWrap .box5Card6 {
+  position: absolute;
+  top: 20%;
+  padding: 0 4px;
 }
 
 .section5 .sec5Card7 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(/portfolio/patagonia/img/main/NYS.png) lightgray 50% / cover no-repeat;
 }
 
+.section5 .sec5Card7:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.527) 0%, rgba(0, 0, 0, 0.5) 100%), url(/portfolio/patagonia/img/main/NYS.png) lightgray 50% / cover no-repeat;
+}
+
+
+.section5 .sec5Card7:hover h3 {
+  position: absolute;
+  top: 10%;
+  transition: 0.3s ease;
+}
+
+.section5 .sec5Card7 .cardWrap {
+  background: none;
+}
+
+.section5 .cardWrap .box5Card7 {
+  position: absolute;
+  top: 20%;
+  padding: 0 24px 0 4px;
+  line-height: 2;
+
+}
+
+
 .section5 .sec5Card8 {
   background: #EAEAEA;
-  ;
   display: flex;
   padding: 10px;
   justify-content: center;
@@ -551,6 +1014,11 @@ video {
   color: #000;
   text-decoration-line: underline;
 }
+
+.section5 .sec5Card8:hover {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 
 .section6 {
   display: flex;
@@ -609,7 +1077,6 @@ video {
   transform: scale3d(1.044, 1.044, 1);
 }
 
-/* section7 카드 갭, 왼쪽여백*/
 
 .section7 {
   display: flex;
@@ -630,26 +1097,79 @@ video {
   width: 100%;
   max-width: 1920px;
   height: 500px;
+  position: relative;
 }
 
 .section7 .swiper-slide {
   border-radius: 10px;
   display: flex;
-  padding: 200px 14px 200px 14px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 220px;
   color: #FFF;
   font-weight: 700;
-  /* filter: brightness(70%); */
-
+  position: relative;
 }
+
+.section7 .swiper-slide:hover h3 {
+  position: absolute;
+  top: 28%;
+  transition: .3s ease;
+}
+
+.section7 .swiper-slide:hover a {
+  position: absolute;
+  background: #FFF;
+  color: #000;
+  transition: .3s ease;
+}
+
+.section7 .swiper-button-prev {
+  display: flex;
+  background-color: #FFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.section7 .swiper-button-prev .bt_left {
+  background: url(/portfolio/patagonia/img/icon/body/icon-chevron-slider.png) no-repeat;
+  background-size: 50% auto;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  transform: scaleX(-1);
+}
+
+.section7 .swiper-button-next {
+  display: flex;
+  background-color: #FFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.section7 .swiper-button-next .bt_right {
+  background: url(/portfolio/patagonia/img/icon/body/icon-chevron-slider.png) no-repeat;
+  background-size: 50% auto;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+}
+
+.section7 .swiper-button-prev::after,
+.section7 .swiper-button-next::after {
+  display: none;
+}
+
 
 .section7 h3 {
   font-size: 20px;
+  position: absolute;
+  left: 8%;
+  top: 40%;
 }
 
-.section7 span {
+.section7 a {
   border-radius: 30px;
   border: 2px solid #FFF;
   display: flex;
@@ -658,32 +1178,64 @@ video {
   align-items: center;
   gap: 10px;
   font-size: 12px;
+  position: absolute;
+  left: 8%;
+  top: 90%;
 }
 
 .section7 .sec7Card1 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/portfolio/patagonia/img/main/ico_sports_img02.jpg) lightgray 50% / cover no-repeat;
 }
 
+.section7 .sec7Card1:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(/portfolio/patagonia/img/main/ico_sports_img02.jpg) lightgray 50% / cover no-repeat;
+}
+
 .section7 .sec7Card2 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/portfolio/patagonia/img/main/ico_sports_img01.jpg ) lightgray 50% / cover no-repeat;
 }
 
+.section7 .sec7Card2:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(/portfolio/patagonia/img/main/ico_sports_img01.jpg) lightgray 50% / cover no-repeat;
+}
+
+
 .section7 .sec7Card3 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/portfolio/patagonia/img/main/ico_sports_img04.jpg) lightgray 50% / cover no-repeat;
-
 }
+
+.section7 .sec7Card3:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(/portfolio/patagonia/img/main/ico_sports_img04.jpg) lightgray 50% / cover no-repeat;
+}
+
 
 .section7 .sec7Card4 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/portfolio/patagonia/img/main/ico_sports_img03.jpg) lightgray 50% / cover no-repeat;
 }
 
+.section7 .sec7Card4:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(/portfolio/patagonia/img/main/ico_sports_img03.jpg) lightgray 50% / cover no-repeat;
+}
+
+
+
 .section7 .sec7Card5 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/portfolio/patagonia/img/main/ico_sports_img05.jpg) lightgray 50% / cover no-repeat;
 }
 
+.section7 .sec7Card5:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(/portfolio/patagonia/img/main/ico_sports_img05.jpg) lightgray 50% / cover no-repeat;
+}
+
+
 .section7 .sec7Card6 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/portfolio/patagonia/img/main/ico_sports_img06.jpg) lightgray 50% / cover no-repeat;
 }
+
+.section7 .sec7Card6:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url(/portfolio/patagonia/img/main/ico_sports_img06.jpg) lightgray 50% / cover no-repeat;
+}
+
 
 .section8 {
   display: flex;
@@ -739,7 +1291,6 @@ video {
   display: flex;
   width: 100%;
   height: 900px;
-  padding: 200px 100px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -904,7 +1455,7 @@ footer span {
   color: #FFF;
   text-align: center;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
+  line-height: 2;
 }

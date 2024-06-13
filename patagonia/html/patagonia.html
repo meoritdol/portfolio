@@ -8,6 +8,8 @@
   <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="/portfolio/patagonia/css/patagonia.css">
+  <link rel="stylesheet" media="all and (max-width : 1199px)" href="/portfolio/patagonia/css/patagonia_t.css">
+  <link rel="stylesheet" media="all and (max-width : 767px)" href="/portfolio/patagonia/css/patagonia_m.css">
   <title>파타고니아</title>
 </head>
 
@@ -20,17 +22,63 @@
     <div class="nav">
       <a href="#" class="logo"></a>
       <div class="menu">
-        <span>Shop</span>
-        <span>Activism</span>
-        <span>Sports</span>
-        <span>Stories</span>
+        <a href="#">Shop</a>
+        <a href="#">Activism</a>
+        <a href="#">Sports</a>
+        <a href="#">Stories</a>
       </div>
       <div class="icon">
         <a href="#" class="search"></a>
         <a href="#" class="profile"></a>
         <a href="#" class="wishlist"></a>
         <a href="#" class="cart"></a>
-        <a href="#" class="hamburger"></a>
+        <a href="#" class="hamburger" onclick="toggleMenu()"></a>
+      </div>
+    </div>
+    <div class=" fullscreen_menu" id="fullscreenMenu">
+      <div class="menu_header">
+        <div><a href="#">로그인</a></div>
+        <div><i class="fa-solid fa-xmark fa-lg" onclick="closeMenu()"></i></div>
+      </div>
+      <div class="menu_main">
+        <div class="text1">
+          <span>Compaany</span>
+          <ul>
+            <li><a href="#">Climate Goals</a></li>
+            <li><a href="#">Our Footprint</a></li>
+            <li><a href="#">Patagonia Films</a></li>
+            <li><a href="#">1% fot the Planet</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">보도자료</a></li>
+          </ul>
+        </div>
+        <div class="text2">
+          <span>Customer Service</span>
+          <ul>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">주문조회</a></li>
+            <li><a href="#">반품 & 환불</a></li>
+            <li><a href="#">매장찾기</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <a href="#">
+            <div class="content1">
+              <h3>WORN <em></em> WEAR</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="content2">
+              <h3>The Cleanest Line</h3>
+              <p>Some stories to get you out there.</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="content3">
+              <h3>파타고니아 사회 환경 보고서</h3>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -50,15 +98,19 @@
           <div class="swiper-wrapper">
             <div class="sec2Card1 swiper-slide">
               <h2>Men’s</h2>
+              <a href="#">Shop</a>
             </div>
             <div class="sec2Card2 swiper-slide">
               <h2>Women’s</h2>
+              <a href="#">Shop</a>
             </div>
             <div class="sec2Card3 swiper-slide">
               <h2>Kids’ & Baby</h2>
+              <a href="#">Shop</a>
             </div>
             <div class="sec2Card4 swiper-slide">
               <h2>Packs & Gear</h2>
+              <a href="#">Shop</a>
             </div>
           </div>
         </div>
@@ -101,39 +153,102 @@
                 </div>
               </div>
               <span>5m Read</span>
-              <!-- div 두 개 앱솔루트 -->
+              <div class="cardWrap">
+                <div class="box5Card1">
+                  <div class="boxText">
+                    <h3>미세 섬유 문제 해결을 위한
+                      파타고니아와 삼성전자의 여정</h3>
+                    <p>빈센트 스탠리</p>
+                  </div>
+                  <div>
+                    <p>지난 3년 동안 파타고니아는 가정용 세탁기의 미세 섬유 저감 기술 개발을 위해 삼성전자와 매우 가깝게 그리고 생산적으로 함께 일해 왔습니다.</p>
+                    <span>5m Read</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="sec5Card2 swiper-slide">
               <h3>Corazón Salado (Salted Heart)</h3>
               <span>Watch</span>
+              <div class="cardWrap">
+                <div class="box5Card2">
+                  <div class="boxText">
+                    <p>라몬 나바로는 Kawéskar 원주민 커뮤니티가 칠레 파타
+                      고니아에서 조상 대대로 살아온 바다를 지키기 위한 여정에
+                      함께 합니다.</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="sec5Card3 swiper-slide">
               <h3>The Custodians</h3>
               <span>Watch</span>
+              <div class="cardWrap">
+                <div class="box5Card3">
+                  <div class="boxText">
+                    <p>물고기들을 보호하기 위해 몇몇의 스코틀랜드 어부들이 해
+                      초 숲을 직접 가꿔 나갑니다.</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="sec5Card4 swiper-slide">
               <h3>Jalpi</h3>
               <span>Watch</span>
+              <div class="cardWrap">
+                <div class="box5Card4">
+                  <div class="boxText">
+                    <p>통영 바다의 잘피숲을 살리는 것은 지역 주민을 살리는 일
+                      이기도 합니다.</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="sec5Card5 swiper-slide">
               <h3>Hot Pink Dolphins</h3>
               <span>Watch</span>
+              <div class="cardWrap">
+                <div class="box5Card5">
+                  <div class="boxText">
+                    <p>돌고래에 대한 위협은 곧 인류에 대한 위협입니다.</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="sec5Card6 swiper-slide">
               <h3>What’s Next?</h3>
               <span>Watch</span>
+              <div class="cardWrap">
+                <div class="box5Card6">
+                  <div class="boxText">
+                    <p>우리의 다음은, 지구를 되살리는 것입니다.</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="sec5Card7 swiper-slide">
-              <h3>Corazón Salado (Salted Heart)</h3>
+              <h3>파타고니아 | 2023 NEW YEAR
+                SKIING</h3>
               <span>Watch</span>
+              <div class="cardWrap">
+                <div class="box5Card7">
+                  <div class="boxText">
+                    <p>2023년 새해의 첫 일출이 떠오르기 전인 새벽 5시, 전국에서 온 100여명의 백컨트리 스키어 · 스노우보더가 휘닉스
+                      평창 스노우 파크에 모였습니다.</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="sec5Card8 swiper-slide">
               <a href="#">모두보기</a>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next">
+            <div class="bt_right"></div>
+          </div>
+          <div class="swiper-button-prev">
+            <div class="bt_left"></div>
+          </div>
         </div>
       </article>
     </div>
@@ -155,31 +270,35 @@
           <div class="swiper-wrapper">
             <div class="sec7Card1 swiper-slide">
               <h3>Climbing</h3>
-              <span>Explore</span>
+              <a>Explore</a>
             </div>
             <div class="sec7Card2 swiper-slide">
               <h3>Trail Running</h3>
-              <span>Explore</span>
+              <a>Explore</a>
             </div>
             <div class="sec7Card3 swiper-slide">
               <h3>Surf</h3>
-              <span>Explore</span>
+              <a>Explore</a>
             </div>
             <div class="sec7Card4 swiper-slide">
               <h3>Mountain Bike</h3>
-              <span>Explore</span>
+              <a>Explore</a>
             </div>
             <div class="sec7Card5 swiper-slide">
               <h3>Fly Fishing</h3>
-              <span>Explore</span>
+              <a>Explore</a>
             </div>
             <div class="sec7Card6 swiper-slide">
               <h3>Snow</h3>
-              <span>Explore</span>
+              <a>Explore</a>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next">
+            <div class="bt_right"></div>
+          </div>
+          <div class="swiper-button-prev">
+            <div class="bt_left"></div>
+          </div>
         </div>
       </article>
     </div>
@@ -285,7 +404,27 @@
   <script>
     var swiper1 = new Swiper(".sec2Swiper", {
       slidesPerView: 4,
-      spaceBetween: 30,
+      spaceBetween: 20,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.2,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 3.2,
+          spaceBetween: 20,
+
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20
+          ,
+        },
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -295,14 +434,30 @@
     var swiper2 = new Swiper(".mySwiper", {
       slidesPerView: 4.1,
       spaceBetween: 30,
-      slidesOffsetBefore: 60,
+      slidesOffsetBefore: 20,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.2,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 3.2,
+          spaceBetween: 20,
+
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20
+          ,
+        },
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
     });
   </script>
-
+  <script src="/portfolio/patagonia/js/patagonia.js"></script>
 </body>
 
 </html>
