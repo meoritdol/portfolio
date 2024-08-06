@@ -90,6 +90,12 @@ header .menu {
   font-weight: 600;
   line-height: normal;
 }
+header .menu_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
 
 header .menu a {
   cursor: pointer;
@@ -98,20 +104,67 @@ header .menu a {
 
 header .menu a::after {
   content: '';
-  height: 6px;
-  width: 100%;
+  height: 8px;
+  width: 86px;
   background: #000;
   position: absolute;
-  left: 0;
+  left: 50%;
   top: -24px;
   border-radius: 20px;
   opacity: 0;
+  transform: translateX(-50%);
 }
 
 header .menu a:hover::after {
   opacity: 1;
 }
 
+header .sports_container {
+  background: #000;
+  color: #fff;
+  width: 100%;
+  top: 10%;
+  left: 0;
+  position: absolute;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+header .menu_list li:hover .sports_container,
+header .sports_container:hover {
+  opacity: 1;
+  visibility: visible;
+}
+header .sports_wrapper {
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  margin: auto;
+}
+header .sports_links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+header .sports_links h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+header .sports_links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  padding: 10px 0;
+  font-weight: 500;
+}
+header .sports_links ul li {
+  display: block;
+  cursor: pointer;
+}
 
 header .icon {
   display: flex;
@@ -297,13 +350,7 @@ header .menu_main {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(/portfolio/patagonia/img/header/img_header_social.jpg) lightgray 50% / cover no-repeat;
 }
 
-
-
-
-
 /* 메인 */
-
-
 .tab_content {
   display: none;
   width: 100%;
@@ -316,7 +363,7 @@ header .menu_main {
 
 .section1 {
   display: flex;
-  height: 400px;
+  height: 580px;
   padding: 191px 303px;
   flex-direction: column;
   justify-content: center;
@@ -453,6 +500,10 @@ video {
   position: relative;
   gap: 20px;
 }
+.section2 .swiper-slide:hover {
+  cursor: pointer;
+}
+
 
 .section2 .swiper-slide:hover h2 {
 
@@ -690,6 +741,9 @@ video {
   position: relative;
 }
 
+.section5 .swiper-slide:hover {
+  cursor: pointer;
+}
 
 .section5 .swiper-slide:hover span {
   border-radius: 30px;
@@ -1108,6 +1162,9 @@ video {
   color: #FFF;
   font-weight: 700;
   position: relative;
+}
+.section7 .swiper-slide:hover {
+  cursor: pointer;
 }
 
 .section7 .swiper-slide:hover h3 {

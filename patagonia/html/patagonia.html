@@ -22,10 +22,74 @@
     <div class="nav">
       <a href="#" class="logo"></a>
       <div class="menu">
-        <a href="#">Shop</a>
-        <a href="#">Activism</a>
-        <a href="#">Sports</a>
-        <a href="#">Stories</a>
+        <ul class="menu_list">
+          <li>
+            <a href="#">Shop</a>
+          </li>
+          <li>
+            <a href="#">Activism</a>
+          </li>
+          <li>
+            <a href="#" class="sports">Sports</a>
+            <div class="sports_container">
+              <div class="sports_wrapper">
+                <ul class="sports_links">
+                  <li>
+                    <h3>Snow</h3>
+                    <ul>
+                      <li>Community</li>
+                      <li>Shop Men's</li>
+                      <li>Shop Women's</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3>Surfing</h3>
+                    <ul>
+                      <li>Community</li>
+                      <li>Shop Men's</li>
+                      <li>Shop Women's</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3>Mountain Biking</h3>
+                    <ul>
+                      <li>Community</li>
+                      <li>Shop Men's</li>
+                      <li>Shop Women's</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3>Trail Running</h3>
+                    <ul>
+                      <li>Community</li>
+                      <li>Shop Men's</li>
+                      <li>Shop Women's</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3>Fly Fishing</h3>
+                    <ul>
+                      <li>Community</li>
+                      <li>Shop Men's</li>
+                      <li>Shop Women's</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h3>Climbing</h3>
+                    <ul>
+                      <li>Community</li>
+                      <li>Shop Men's</li>
+                      <li>Shop Women's</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#">Stories</a>
+          </li>
+        </ul>
       </div>
       <div class="icon">
         <a href="#" class="search"></a>
@@ -42,7 +106,7 @@
       </div>
       <div class="menu_main">
         <div class="text1">
-          <span>Compaany</span>
+          <span>Company</span>
           <ul>
             <li><a href="#">Climate Goals</a></li>
             <li><a href="#">Our Footprint</a></li>
@@ -421,20 +485,13 @@
           ,
         },
       },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+
     });
 
     var swiper2 = new Swiper(".mySwiper", {
       slidesPerView: 4.1,
       spaceBetween: 30,
-      slidesOffsetBefore: 20,
+      slidesOffsetBefore: 60,
       breakpoints: {
         320: {
           slidesPerView: 1.2,
