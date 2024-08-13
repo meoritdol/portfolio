@@ -1,7 +1,7 @@
 const productsData = {
   "best1": [
     {
-      "frontImage": "/lush/img/20230524181430L.png",
+      "frontImage": "/portfolio/lush/img/20230524181430L.png",
       "backContent": {
         "name": "마스크 오브 매그너민티",
         "price": "₩22,000",
@@ -9,7 +9,7 @@ const productsData = {
       }
     },
     {
-      "frontImage": "/lush/img/20230106173535L.png",
+      "frontImage": "/portfolio/lush/img/20230106173535L.png",
       "backContent": {
         "name": "더티 보디 스프레이",
         "price": "₩60,000",
@@ -17,7 +17,7 @@ const productsData = {
       }
     },
     {
-      "frontImage": "/lush/img/20211008101413L.png",
+      "frontImage": "/portfolio/lush/img/20211008101413L.png",
       "backContent": {
         "name": "슬리피 보디 스프레이",
         "price": "₩60,000",
@@ -27,7 +27,7 @@ const productsData = {
   ],
   "best2": [
     {
-      "frontImage": "/lush/img/20220722121317L.png",
+      "frontImage": "/portfolio/lush/img/20220722121317L.png",
       "backContent": {
         "name": "슬리피 샤워젤",
         "price": "₩19,000",
@@ -35,7 +35,7 @@ const productsData = {
       }
     },
     {
-      "frontImage": "/lush/img/20220929153226L.png",
+      "frontImage": "/portfolio/lush/img/20220929153226L.png",
       "backContent": {
         "name": "대디오 샴푸",
         "price": "₩19,000",
@@ -43,7 +43,7 @@ const productsData = {
       }
     },
     {
-      "frontImage": "/lush/img/20211008092622L.png",
+      "frontImage": "/portfolio/lush/img/20211008092622L.png",
       "backContent": {
         "name": "와사비 샴푸",
         "price": "₩26,000",
@@ -53,7 +53,7 @@ const productsData = {
   ],
   "best3": [
     {
-      "frontImage": "/lush/img/20240730180307L(2).png",
+      "frontImage": "/portfolio/lush/img/20240730180307L(2).png",
       "backContent": {
         "name": "올리브 샤워젤",
         "price": "₩17,000",
@@ -61,7 +61,7 @@ const productsData = {
       }
     },
     {
-      "frontImage": "/lush/img/20211007171137L.png",
+      "frontImage": "/portfolio/lush/img/20211007171137L.png",
       "backContent": {
         "name": "챠콜 솝",
         "price": "₩22,000",
@@ -69,7 +69,7 @@ const productsData = {
       }
     },
     {
-      "frontImage": "/lush/img/20220929153226L.png",
+      "frontImage": "/portfolio/lush/img/20220929153226L.png",
       "backContent": {
         "name": "더티 샤워젤",
         "price": "₩17,000",
@@ -127,37 +127,37 @@ document.addEventListener('DOMContentLoaded', function () {
 const sectionsData = {
   "section3": [
     {
-      "imageSrc": "/lush/img/web_turtle_power_solid_body_scrub_ecom_9037_2024_400x.jpg",
+      "imageSrc": "/portfolio/lush/img/web_turtle_power_solid_body_scrub_ecom_9037_2024_400x.jpg",
       "altText": "터틀 바디스크럽"
     },
     {
-      "imageSrc": "/lush/img/web_super_milk_shower_gel_2024_400x.jpg",
+      "imageSrc": "/portfolio/lush/img/web_super_milk_shower_gel_2024_400x.jpg",
       "altText": "밀크 샤워솝"
     },
     {
-      "imageSrc": "/lush/img/web_goongala_shampoo_bar_ecom_9037_2024_400x.jpg",
+      "imageSrc": "/portfolio/lush/img/web_goongala_shampoo_bar_ecom_9037_2024_400x.jpg",
       "altText": "군가라 샴푸바"
     },
     {
-      "imageSrc": "/lush/img/web_guardian_of_the_forest_shower_gel_2024_400x.jpg",
+      "imageSrc": "/portfolio/lush/img/web_guardian_of_the_forest_shower_gel_2024_400x.jpg",
       "altText": "가디언 샤워솝"
     }
   ],
   "section4": [
     {
-      "imageSrc": "/lush/img/web_peace_love_and_pizza_bath_bomb_TMNT_9037_2024_400x.webp",
+      "imageSrc": "/portfolio/lush/img/web_peace_love_and_pizza_bath_bomb_TMNT_9037_2024_400x.webp",
       "altText": "피자 배쓰밤"
     },
     {
-      "imageSrc": "/lush/img/web_krang_shower_jelly_ecom_9037_2024_600x.webp",
+      "imageSrc": "/portfolio/lush/img/web_krang_shower_jelly_ecom_9037_2024_600x.webp",
       "altText": "크랑 샤워젤리"
     },
     {
-      "imageSrc": "/lush/img/web_green_machine_bubble_bar_ecom_9037_2024_600x.webp",
+      "imageSrc": "/portfolio/lush/img/web_green_machine_bubble_bar_ecom_9037_2024_600x.webp",
       "altText": "그린머신 버블바"
     },
     {
-      "imageSrc": "/lush/img/Four-brothers_600x.webp",
+      "imageSrc": "/portfolio/lush/img/Four-brothers_600x.webp",
       "altText": "터틀 배쓰밤4"
     }
   ]
