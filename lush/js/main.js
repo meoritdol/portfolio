@@ -162,7 +162,6 @@ const sectionsData = {
     }
   ]
 };
-
 Object.keys(sectionsData).forEach(sectionId => {
   const container = document.querySelector(`.${sectionId} .items`);
   const items = sectionsData[sectionId];

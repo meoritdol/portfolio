@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
       end: "top 20%",
     }
   });
-
   // Section 4 - 오른쪽에서 슬라이드 인 & 스케일 업
   gsap.from(".section4 .items img", {
     x: 100,
